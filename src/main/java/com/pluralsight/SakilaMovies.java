@@ -64,8 +64,8 @@ public class SakilaMovies {
         try{
             String query = """
                     SELECT *, film.title FROM film_actor
-                    JOIN film ON film.film_id = film_actor.actor_id
-                    JOIN actor ON film_actor.film_id = actor.actor_id
+                    JOIN film ON film.film_id = film_actor.film_id
+                    JOIN actor ON film_actor.actor_id = actor.actor_id
                     WHERE last_name = ? AND first_name = ?;
                     """;
             try(Connection connection = dataSource.getConnection();
