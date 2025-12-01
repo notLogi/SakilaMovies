@@ -31,6 +31,7 @@ public class SakilaMovies {
         System.out.println("Enter first name: ");
         String firstNameSecondPrompt = scanner.nextLine();
         displayActorsInMovie(dataSource, lastNameSecondPrompt, firstNameSecondPrompt);
+        scanner.close();
     }
 
     private static void displayActorsOnLastName(BasicDataSource dataSource, String lastNameFirstPrompt){
